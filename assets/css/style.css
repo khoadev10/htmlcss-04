@@ -1,16 +1,20 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --heading-color: #000958;
+}
 
 html {
     font-size: 62.5%;
 }
 
 body {
+    height: 8000px;
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
 }
-
+/* ========= Common ========= */
 h1,
 h2,
 h3,
@@ -28,6 +32,62 @@ button {
     font-size: inherit;
 }
 
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
 a {
     text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: auto;
+}
+
+/* ========= Header ========= */
+.header {
+    padding: 20px 0 112px;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -20px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.navbar__list {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar__link {
+    color: #5e6085;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.navbar__item.active .navbar__link {
+    color: var(--heading-color);
+}
+
+.header__btn {
+    min-width: 117px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    border: 1px solid rgb(0 9 88 / 70%);
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
 }
