@@ -39,7 +39,7 @@ button {
 
 button:hover {
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .btn-view {
@@ -52,7 +52,6 @@ button:hover {
 }
 
 .btn-view:hover {
-    opacity: 0.6;
     box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
 
@@ -696,4 +695,113 @@ a {
     display: block;
     margin: 45px auto 0;
     min-width: 214px;
+}
+
+/* ========= Services ========= */
+.groomers {
+    padding: 130px 0;
+}
+
+.groomers__top {
+    text-align: center;
+}
+
+.groomers__title {
+    margin-bottom: 15px;
+    color: #5e6085;
+    font-family: Sora, sans-serif;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* List */
+.groomers__list {
+    display: flex;
+    gap: 35px;
+    margin-top: 59px;
+}
+
+.groomers-item {
+    flex: 1;
+}
+
+.groomers-item_top {
+    position: relative;
+}
+
+.groomers-item_wrap-avatar {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 87%;
+    border-radius:130px;
+    overflow: hidden;
+}
+
+.groomers-item_wrap-avatar::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 94%;
+    border-radius: 130px;
+    background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
+    z-index: -1;
+}
+
+.groomers-item:nth-child(2) .groomers-item_wrap-avatar::after {
+    background: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
+}
+
+.groomers-item:nth-child(3) .groomers-item_wrap-avatar::after {
+    background: linear-gradient(180deg, #fabf3e 0%, #ffa14a 100%);
+}
+
+.groomers-item:nth-child(4) .groomers-item_wrap-avatar::after {
+    background: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
+}
+
+.groomers-item__avatar {
+    width: 100%;
+    object-fit: cover;
+}
+
+.groomers-item__deco {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.groomers-item:nth-child(even) .groomers-item__deco {
+    top: 7%;
+}
+
+/* Info */
+.groomers-item__info {
+    margin-top: 29px;
+    text-align: center;
+}
+
+.groomers-item__title {
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.groomers-item__name {
+    margin-top: 14px;
+    color: var(--heading-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Button */
+.groomers__btn {
+    display: block;
+    margin: 48px auto 0;
+    min-width: 193px;
 }
